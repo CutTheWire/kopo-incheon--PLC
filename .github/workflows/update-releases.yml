@@ -1,0 +1,53 @@
+name: Update Releases
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  create-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Get tag version
+        id: tag
+        run: echo "version=${GITHUB_REF#refs/tags/}" >> $GITHUB_OUTPUT
+
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.tag.outputs.version }}
+          release_name: Release ${{ steps.tag.outputs.version }}
+          draft: false
+          prerelease: false
+
+      - name: Upload HMI XPD files
+        run: |
+          for file in HMI/*.xpd; do
+            if [ -f "$file" ]; then
+              gh release upload ${{ steps.tag.outputs.version }} "$file"
+            fi
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
+
+      - name: Upload PLC XGWX files
+        run: |
+          for file in PLC/*.xgwx; do
+            if [ -f "$file" ]; then
+              gh release upload ${{ steps.tag.outputs.version }} "$file"
+            fi
+          done
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        shell: bash
