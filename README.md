@@ -1,6 +1,8 @@
 # kopo-incheon--PLC
 > 사거리 신호등 제어
-
+## 주의 사항
+- 해당 리포지토리는 .xpd와 .xgwx를 저장하는 저장소로, Git Branch 개발 방식에 의거한 git push를 금지한다.
+- main Branch를 한 사람 점유하여 커밋 후, 다음 사람이 점유하여 커밋하는 방식으로 운용되어야 한다. 
 ## 개발 환경
 
 ### Software
@@ -17,3 +19,6 @@
   - 시리즈 : IPC Series(wXP)
   - 모델 : PC/AT
   - 해상도 : 1600x900
+
+### 실행 파일 위치 
+- [Releases](https://github.com/CutTheWire/kopo-incheon--PLC/releases)
