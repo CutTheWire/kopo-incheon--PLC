@@ -1,0 +1,8 @@
+# PLC backup files
+*.bak*
+
+# Defult ignore files
+.env
+env/
+ENV/
+env.bak/
