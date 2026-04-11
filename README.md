@@ -22,3 +22,20 @@
 
 ### 실행 파일 위치 
 - [Releases](https://github.com/CutTheWire/kopo-incheon--PLC/releases)
+
+## HMI
+### B-1 화면
+![B-1](https://lh3.googleusercontent.com/d/15wR4_S83RQGNP5a6KcovQ6zvVr-Kv60i)
+
+### B-2 화면
+![B-1](https://lh3.googleusercontent.com/d/1K_sBD4iq8t49fHKqRjKW010RkzrF0ApZ)
+
+### 점멸등 HMI
+![점멸등](https://lh3.googleusercontent.com/d/1aMWXNuEFPyb2-B-b81VoL6z9ICGgmUeR)
+- 1번 화면 : B-2 화면 (탑뷰)
+- 2번 화면 : B-1 화면 (패널)
+
+### 점멸등 HMI
+![점멸등](https://lh3.googleusercontent.com/d/1bvkNfZrzStxfFqo1XrdXQKUmIljzyMRe)
+- 1번 화면 : B-2 화면 (탑뷰)
+- 2번 화면 : B-1 화면 (패널)
